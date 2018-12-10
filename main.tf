@@ -1,28 +1,7 @@
 variable "my_name" {
-  default = ["Galin", "Nikolaev", "Donkov"]
+  default = "Galin_Nikolaev_Donkov"
 }
 
-variable "my_full_name" {
-  default = {
-    First  = "Galin"
-    Second = "Nikolaev"
-    Family = "Donkov"
-  }
-}
-
-## functions to test
-output "my_name_length" {
-  value = "${length(var.my_name)}"
-}
-
-output "first_name" {
-  value = "${lookup(var.my_full_name, "First")}"
-}
-
-output "second_name" {
-  value = "${lookup(var.my_full_name, "Second")}"
-}
-
-output "family_name" {
-  value = "${lookup(var.my_full_name, "Family")}"
+output "What_is_my_name" {
+  value = "${var.my_name}"
 }
